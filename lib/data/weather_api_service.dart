@@ -8,7 +8,7 @@ class WeatherApiService {
 
   static Future<WeatherModel?> fetchDataAna(LocationModel location) async {
     String apiUrl =
-        'https://api.openweathermap.org/data/3.0/onecall?lat=${location.lat}&lon=${location.lon}&exclude=minutely,alerts&units=metric&APPID=cd5baa4c47f31a6314d3c92afa7fb872';
+        'https://api.openweathermap.org/data/3.0/onecall?lat=${location.lat}&lon=${location.lon}&exclude=minutely,alerts&units=metric&APPID={APPID}}';
 
     try {
       final response = await _dio.get(apiUrl);
